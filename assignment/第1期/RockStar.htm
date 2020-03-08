@@ -1,0 +1,377 @@
+<html>
+<head>
+<title>RockStar Games</title>
+<meta charset="UTF-8">
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:"HelveticaNeueLTW07-85Heavy";
+}
+a{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+:root{
+    --basic-size:12px;
+    --header-height:60px;
+    --yellow: #fcaf17;
+    --padding-size:50px;
+    --image-height:800px;
+}
+.header{
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height:var(--header-height);
+    padding: var(--basic-size) calc(var(--basic-size)*2);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/global/2qbg.png);
+    z-index: 1;
+}
+.header>a{
+    width: calc(var(--basic-size)*3);
+    height: calc(var(--basic-size)*3);
+}
+.header>.list{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:calc(var(--basic-size)/2) calc(var(--basic-size)/2);
+}
+.header .list span{
+    visibility:visible;
+    width: 100%;
+    height:calc(var(--basic-size)/3);
+    background: var(--yellow);
+}
+.header>.logo{
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    text-align: center;
+    background-color: var(--yellow);
+    border-radius: 20%;
+}
+.header>.user{
+    border-radius: 50%;
+    background-color: rgba(201, 192, 192, 0.3);
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    text-align: center;
+}
+.content{
+    padding:0 var(--padding-size);
+    margin-top: var(--header-height);
+}
+.content>.section1{
+    background-color: black;
+    height:auto;
+}
+.section1>.images1{
+    width:100%;
+    height:auto;
+    display:block;
+    position: relative;
+    padding-top:var(--image-height);
+}
+.section1 .images1 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/1.jpg");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1 .images1 .page2{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/2.png");
+    position:absolute;
+    top:0;
+    left:0;
+}
+.section1 .images1 .page3{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/3.png");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.images2{
+    width:100%;
+    height:auto;
+    display:none;
+    position: relative;
+    padding-top:var(--image-height);
+}
+.section1 .images2 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/1.jpg");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1 .images2 .page2{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/2.png");
+    position:absolute;
+    top:0;
+    left:0;
+}
+.section1 .images2 .page3{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/3.png");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.images3{
+    width:100%;
+    height:auto;
+    display:none;
+    position: relative;
+    padding-top:var(--image-height);
+}
+.section1 .images3 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12133/en_us/1280.jpg");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.footer{
+    width: 100%;
+    margin-bottom: calc(var(--basic-size)*3);
+}
+.section1>.footer>a{
+    display: flex;
+    width: 100%;
+    height: calc(var(--basic-size)*4);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: calc(var(--basic-size)*2);
+    align-items: center;
+}
+.footer .ad{
+    font-size: calc(var(--basic-size)*1.5);
+    color: white;
+    font-weight:bolder;
+}
+.footer .watch{
+    background-color:var(--yellow);
+    height: 100%;
+    color: black;
+    font-weight:bolder;
+    font-size: calc(var(--basic-size)*1.5);
+    text-align: center;
+    padding:0 calc(var(--basic-size)*2);
+    line-height: calc(var(--basic-size)*4);
+}
+.footer .click{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: calc(var(--basic-size)*1.5);
+}
+.click .button1{
+    cursor: pointer;
+    background-color: var(--yellow);
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+.click .button2{
+    cursor: pointer;
+    background-color:black;
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+.click .button3{
+    cursor: pointer;
+    background-color:black;
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+</style>
+<script type='text/javascript'>
+var image1=document.getElementsByClassName('images1');
+var image2=document.getElementsByClassName('images2');
+var image3=document.getElementsByClassName('images3');
+var button1=document.getElementsByClassName('button1');
+var button2=document.getElementsByClassName('button2');
+var button3=document.getElementsByClassName('button3');
+function change1(){
+    image1[0].style.display="block";
+    image2[0].style.display="none";
+    image3[0].style.display="none";
+    button1[0].style.backgroundColor="var(--yellow)";
+    button2[0].style.backgroundColor="black";
+    button3[0].style.backgroundColor="black";
+}
+function change2(){
+    image2[0].style.display="block";
+    image1[0].style.display="none";
+    image3[0].style.display="none";
+    button2[0].style.backgroundColor="var(--yellow)";
+    button1[0].style.backgroundColor="black";
+    button3[0].style.backgroundColor="black";
+}
+function change3(){
+    image3[0].style.display="block";
+    image2[0].style.display="none";
+    image1[0].style.display="none";
+    button3[0].style.backgroundColor="var(--yellow)";
+    button2[0].style.backgroundColor="black";
+    button1[0].style.backgroundColor="black";
+}
+</script>
+</head>
+<body>
+    <div class='header'>
+        <a class='list' href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <a class='logo'>R</a>
+        <a class='user'>人</a>
+    </div>
+    <div class='content'>
+        <div class='section1'>
+            <a class='images1' href="#">
+            <div class='page1'></div>
+            <div class='page2'></div>
+            <div class='page3'></div>
+            </a>
+            <a class='images2' href="#">
+                <div class='page1'></div>
+                <div class='page2'></div>
+                <div class='page3'></div>
+            </a>
+            <a class='images3' href="#">
+                <div class='page1'></div>
+            </a>
+            <div class='footer'>
+                <a class='lead' href="#">
+                <div class='ad'>RED DEAD ONLINE: MOONSHINERS</div>
+                <div class='watch'>WATCH NOW</div>
+                </a>
+                <div class='click'>
+                    <div class='button1' onclick="change1()"></div>
+                    <div class='button2' onclick="change2()"></div>
+                    <div class='button3' onclick="change3()"></div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1></h1>
+            <post>
+                <pic>post1</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post2</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post3</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post4</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post5</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post6</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <viewmore></viewmore>
+        </section>
+        <section>
+            <h1></h1>
+            <post>
+                <pic>post1</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post2</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post3</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <post>
+                <pic>post4</pic>
+                <comment>
+                    <name></name>
+                    <h5></h5>
+                </comment>
+            </post>
+            <viewmore></viewmore>
+        </section>
+    </div>
+<footer>
+    <left></left>
+    <center>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </center>
+    <right></right>
+</footer>
+</body>
+</html>
