@@ -1,0 +1,755 @@
+<html>
+<head>
+<title>RockStar Games</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:"HelveticaNeueLTW07-85Heavy";
+    overflow:visible;
+}
+a{
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+}
+:root{
+    --basic-size:12px;
+    --header-height:60px;
+    --yellow: #fcaf17;
+}
+.header{
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height:var(--header-height);
+    padding: var(--basic-size) calc(var(--basic-size)*2);
+    background-color: black;
+    z-index: 1;
+}
+.header>a{
+    width: calc(var(--basic-size)*3);
+    height: calc(var(--basic-size)*3);
+}
+.header>.list{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:calc(var(--basic-size)/2) calc(var(--basic-size)/2);
+}
+.header .list span{
+    visibility:visible;
+    width: 100%;
+    height:calc(var(--basic-size)/3);
+    background: var(--yellow);
+}
+.header>.logo{
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    text-align: center;
+    background-color: var(--yellow);
+    border-radius: 20%;
+}
+.header>.user{
+    border-radius: 50%;
+    background-color: rgba(201, 192, 192, 0.3);
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    text-align: center;
+}
+.content{
+    max-width: 1420px;
+    margin:0 auto ;
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--header-height);
+}
+.content>.section1{
+    background-color: black;
+    height:auto;
+    margin-bottom: calc(var(--basic-size)*3);
+}
+.section1>.images1{
+    width:100%;
+    height:0;
+    padding-top: 56.25%;
+    display:block;
+    position: relative;
+}
+.section1 .images1 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/1.jpg");
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1 .images1 .page2{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/2.png");
+    background-position: center;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.section1 .images1 .page3{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12135/_global/layers/3.png");
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.images2{
+    width:100%;
+    height:0;
+    display:none;
+    position: relative;
+    padding-top:56.25%;
+}
+.section1 .images2 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/1.jpg");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1 .images2 .page2{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/2.png");
+    position:absolute;
+    top:0;
+    left:0;
+}
+.section1 .images2 .page3{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image: url("https://videos-rockstargames-com.akamaized.net/screencaps/12134/_global/layers/3.png");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.images3{
+    width:100%;
+    height:0;
+    display:none;
+    position: relative;
+    padding-top:56.25%;
+}
+.section1 .images3 .page1{
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-image:url("https://videos-rockstargames-com.akamaized.net/screencaps/12133/en_us/1280.jpg");
+    position: absolute;
+    top:0;
+    left:0;
+}
+.section1>.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+@media only screen and (min-width:768px){
+.section1>.footer>a{
+    display: flex;
+    width: 100%;
+    height: calc(var(--basic-size)*4);
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: calc(var(--basic-size)*2);
+    align-items: center;
+}
+.footer .ad{    
+    font-size: calc(var(--basic-size)*1.5);
+    color: white;
+    font-weight:bolder;
+    text-align: center;
+}
+.footer .watch{
+    background-color:var(--yellow);
+    height: 100%;
+    color: black;
+    font-weight:bolder;
+    font-size: calc(var(--basic-size)*1.5);
+    text-align: center;
+    padding:0 calc(var(--basic-size)*2);
+    line-height: calc(var(--basic-size)*4);
+}
+}
+@media only screen and (max-width:768px){
+.section1>.footer>a{
+    display: flex;
+    width: 100%;
+    height:auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .ad{    
+    font-size: calc(var(--basic-size)*1.5);
+    color: white;
+    font-weight:bolder;
+    text-align: center;
+    padding:var(--basic-size) 0;
+}
+.footer .watch{
+    background-color:var(--yellow);
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-weight:bolder;
+    font-size: calc(var(--basic-size)*1.5);
+    padding:var(--basic-size) 0;
+    text-align: center;
+}
+}
+.footer .click{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: calc(var(--basic-size)*1.5);
+}
+.click .button1{
+    cursor: pointer;
+    background-color: var(--yellow);
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+.click .button2{
+    cursor: pointer;
+    background-color:black;
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+.click .button3{
+    cursor: pointer;
+    background-color:black;
+    height: var(--basic-size);
+    width: var(--basic-size);
+    border-radius: 50%;
+    margin-right: calc(var(--basic-size)*1.5);
+}
+h1{
+    font-size: calc(var(--basic-size)*2.4);
+    font-weight: bolder;
+    width: 100%;
+    border-bottom: black solid calc(var(--basic-size)*0.5);
+    margin-bottom: calc(var(--basic-size)*2);
+}
+.section2{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    row-gap: calc(var(--basic-size)*2);
+    column-gap:calc(var(--basic-size)*2);
+    margin-bottom: calc(var(--basic-size)*3);
+}
+.section2>.post1{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+}
+.post1>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/71281eb2bd6fff55e919000300d435a9a718e5d9.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 56.25%;
+}
+.post1>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post1>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post1>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+@media only screen and (min-width:1200px){
+.section2>.post2{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post3{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post4{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 2;
+}
+.section2>.post5{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 2;
+}
+.section2>.post6{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 2;
+}
+}
+@media only screen and (min-width:992px) and (max-width:1200px){
+.section2>.post2{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post3{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post4{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post5{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+.section2>.post6{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: span 3;
+}
+}
+@media only screen and (min-width:0px) and (max-width:992px){
+.section2>.post2{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+}
+.section2>.post3{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+}
+.section2>.post4{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+}
+.section2>.post5{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+}
+.section2>.post6{
+    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.2);
+    grid-column: 1/-1;
+}
+}
+.post2>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/f32cd125070cfba2a331cd7ad6a2f49cb321ab74.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+}
+.post2>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post2>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post2>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.post3>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/484de0460a8b595629b521e5ebbd1e3832498b49.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+}
+.post3>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post3>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post3>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*2);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.post4>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/91ff14c01e43570f696cc0276314c18b53bb39d1.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+}
+.post4>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post4>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post4>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*1.6);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.post5>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/531c7a94a33bf81ce93a0f0b316f034b1e883a96.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+}
+.post5>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post5>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post5>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*1.6);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+.post6>.pic{
+    background-image: url("https://media.rockstargames.com/rockstargames-newsite/uploads/80c6b6d76460453cda3904836f4dbdbbbbf95ff7.jpg");
+    background-size: cover;
+    background-position:top center;
+    width: 100%;
+    height:0;
+    padding-top: 100%;
+}
+.post6>.comment{
+    padding:calc(var(--basic-size)*1) var(--basic-size);
+}
+.post6>.comment>.name{
+    color: black;
+    font-size: calc(var(--basic-size)*1.3);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+.post6>.comment>h5{
+    color: black;
+    font-size: calc(var(--basic-size)*1.6);
+    font-weight: bolder;
+    vertical-align: middle;
+}
+@media only screen and (min-width: 1200px){
+.section3{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: calc(var(--basic-size)*2);
+    column-gap:calc(var(--basic-size)*2);
+    margin-bottom: calc(var(--basic-size)*3);
+}
+}
+@media only screen and (min-width: 768px) and (max-width:992px){
+.section3{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: calc(var(--basic-size)*2);
+    column-gap:calc(var(--basic-size)*2);
+    margin-bottom: calc(var(--basic-size)*3);
+}
+}
+@media only screen and (min-width: 0px) and (max-width:768px){
+.section3{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: calc(var(--basic-size)*2);
+    column-gap:calc(var(--basic-size)*2);
+    margin-bottom: calc(var(--basic-size)*3);
+}
+}
+.post7>.pic{
+    background-image: url('/rockstar_games/games/img/fob/640/reddeadredemption2.jpg');
+    background-size: cover;
+    background-position:top center;
+    height:0;
+    padding-top: 123%;
+}
+.post8>.pic{
+    background-image: url('/rockstar_games/games/img/fob/640/V.jpg');
+    background-size: cover;
+    background-position:top center;
+    height:0;
+    padding-top: 123%;
+}
+.post9>.pic{
+    background-image: url("/rockstar_games/games/img/fob/640/lanoire.jpg");
+    background-size: cover;
+    background-position:top center;
+    height:0;
+    padding-top: 123%;
+}
+.post10>.pic{
+    background-image: url("/rockstar_games/games/img/fob/640/bully.jpg");
+    background-size: cover;
+    background-position:top center;
+    height:0;
+    padding-top: 123%;
+}
+.viewmore{
+    text-align: center;
+    margin-bottom: calc(var(--basic-size)*3);
+}
+.viewmore>a{
+    color: black;
+    font-size: calc(var(--basic-size)*1.4);
+    font-weight: bold;
+    border-bottom: var(--yellow) solid calc(var(--basic-size)*0.3);
+}
+@media only screen and (min-width:768px){
+footer{
+    background-color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:calc(var(--basic-size)*2) calc(var(--basic-size)*2);
+}
+footer>div{
+    color:white;
+    font-size: calc(var(--basic-size)*1.5);
+    font-weight: bolder;
+}
+footer>.center{
+    text-align: center;
+}
+footer>.center>span{
+    margin-right:calc(var(--basic-size)*1);
+}
+}
+@media only screen and (max-width:768px){
+footer{
+    background-color: black;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding:calc(var(--basic-size)*2) calc(var(--basic-size)*2);
+}
+footer>div{
+    color:white;
+    text-align: center;
+    width: 100%;
+    font-size: calc(var(--basic-size)*1.5);
+    font-weight: bolder;
+    margin-top: calc(var(--basic-size)*1.5);
+}
+footer>.center{
+    text-align: center;
+}
+footer>.center>span{
+    margin-right:calc(var(--basic-size)*1);
+}
+}
+</style>
+<script type='text/javascript'>
+var image1=document.getElementsByClassName('images1');
+var image2=document.getElementsByClassName('images2');
+var image3=document.getElementsByClassName('images3');
+var button1=document.getElementsByClassName('button1');
+var button2=document.getElementsByClassName('button2');
+var button3=document.getElementsByClassName('button3');
+var ad=document.getElementsByClassName("ad");
+function change1(){
+    image1[0].style.display="block";
+    image2[0].style.display="none";
+    image3[0].style.display="none";
+    button1[0].style.backgroundColor="var(--yellow)";
+    button2[0].style.backgroundColor="black";
+    button3[0].style.backgroundColor="black";
+    ad[0].innerHTML="RED DEAD ONLINE: MOONSHINERS";
+}
+function change2(){
+    image2[0].style.display="block";
+    image1[0].style.display="none";
+    image3[0].style.display="none";
+    button2[0].style.backgroundColor="var(--yellow)";
+    button1[0].style.backgroundColor="black";
+    button3[0].style.backgroundColor="black";
+    ad[0].innerHTML="GRAND THEFT AUTO ONLINE: THE DIAMOND CASINO HEIST";
+}
+function change3(){
+    image3[0].style.display="block";
+    image2[0].style.display="none";
+    image1[0].style.display="none";
+    button3[0].style.backgroundColor="var(--yellow)";
+    button2[0].style.backgroundColor="black";
+    button1[0].style.backgroundColor="black";
+    ad[0].innerHTML="RED DEAD REDEMPTION 2: PC LAUNCH TRAILER";
+}
+function getYellow(obj){
+    obj.childNodes[3].childNodes[3].style.color="var(--yellow)";
+}
+function getBlack(obj){
+    obj.childNodes[3].childNodes[3].style.color="black";
+}
+function raiseborder(obj){
+    obj.style.backgroundColor="var(--yellow)";
+}
+function downborder(obj){
+    obj.style.backgroundColor="white";
+}
+</script>
+</head>
+<body>
+    <div class='header'>
+        <a class='list' href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <a class='logo'>R</a>
+        <a class='user'>人</a>
+    </div>
+    <div class='content'>
+        <div class='section1'>
+            <a class='images1' href="#">
+            <div class='page1'></div>
+            <div class='page2'></div>
+            <div class='page3'></div>
+            </a>
+            <a class='images2' href="#">
+                <div class='page1'></div>
+                <div class='page2'></div>
+                <div class='page3'></div>
+            </a>
+            <a class='images3' href="#">
+                <div class='page1'></div>
+            </a>
+            <div class='footer'>
+                <a class='lead' href="#">
+                <div class='ad'>RED DEAD ONLINE: MOONSHINERS</div>
+                <div class='watch'>WATCH NOW</div>
+                </a>
+                <div class='click'>
+                    <div class='button1' onclick="change1()"></div>
+                    <div class='button2' onclick="change2()"></div>
+                    <div class='button3' onclick="change3()"></div>
+                </div>
+            </div>
+        </div>
+        <h1>NEWSWIRE</h1>
+        <div class='section2'>
+            <a class='post1' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>GTA ONLINE</div>
+                    <h5>Open Wheel Racing Now Available for GTA Online</h5>
+                </div>
+            </a>
+            <a class='post2' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>GTA ONLINE</div>
+                    <h5>Nagasaki Stryder Now Available in GTA Online</h5>
+                </div>
+            </a>
+            <a class='post3' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>RED DEAD ONLINE</div>
+                    <h5>Red Dead Online Challenges,Bonuse and Discounts</h5>
+                </div>
+            </a>
+            <a class='post4' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>FTA ONLINE</div>
+                    <h5>Double Rewards on Gunrunning Sell Missions and Bunker Series</h5>
+                </div>
+            </a>
+            <a class='post5' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>GAME TIPS</div>
+                    <h5>Open Wheel Racing Tips and Tactics</h5>
+                </div>
+            </a>
+            <a class='post6' href="#" onmouseover="getYellow(this)" onmouseout="getBlack(this)">
+                <div class='pic'></div>
+                <div class='comment'>
+                    <div class='name'>WAREHOUSE</div>
+                    <h5>Red Dead Redemption 2 Wildlife Calendar</h5>
+                </div>
+            </a>
+        </div>
+        <div class='viewmore'>
+            <a href="#" onmouseover="raiseborder(this)" onmouseout="downborder(this)">View More</a>
+        </div>
+        <h1>FEATURED GAMES</h1>
+        <div class='section3'>
+            <a class='post7' href="#">
+                <div class='pic'></div>
+            </a>
+            <a class='post8' href="#">
+                <div class='pic'></div>
+            </a>
+            <a class='post9' href="#">
+                <div class='pic'></div>
+            </a>
+            <a class='post10' href="#">
+                <div class='pic'></div>
+            </a>
+        </div>
+        <div class='viewmore'>
+            <a href="#" onmouseover="raiseborder(this)" onmouseout="downborder(this)">View More</a>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class='left'>Rockstar Games</div>
+    <div class=center>
+        <span>New York</span>
+        <span>London</span>
+        <span>Paris</span>
+        <span>Bogota</span>
+    </div>
+    <div class='right'>MCMXCVIII</div>
+</footer>
+</html>
